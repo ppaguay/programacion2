@@ -20,8 +20,13 @@ namespace Oasis
             cursoEst1.setDescripcion("Primero");
             est1.setCurso(cursoEst1);
 
+            Estudiante est2 = new Estudiante(2,"Pedro", cursoEst1);            
+
             listado.Add(est1);
             Console.WriteLine(listado.Count);
+            listado.Add(est2);
+            Console.WriteLine(listado.Count);
+
             Console.ReadLine();
 
         }

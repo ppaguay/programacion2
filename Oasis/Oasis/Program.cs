@@ -30,9 +30,8 @@ namespace Oasis
             //Imprimir todos los elementos
             for(int i =0; i < listado.Count; i++)
             {
-                listado[i].getNombre();
+               Console.WriteLine( listado[i].getNombre());
             }
-
             Console.ReadLine();
 
         }

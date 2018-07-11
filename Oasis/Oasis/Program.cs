@@ -33,20 +33,25 @@ namespace Oasis
                Console.WriteLine( listado[i].getNombre());
             }
             //Buscar
-            int codigoBuscar;
-            Console.Write("Codigo a buscar:");
-            codigoBuscar = Convert.ToInt32(Console.ReadLine());
+            string nombreBuscar;
+            Console.Write("Nombre a buscar:");
+            nombreBuscar = Console.ReadLine();
             bool encontrado = false;
             int indice = 0;
+            Estudiante estudianteEncontrado = null;
             while (indice < listado.Count)
             {
-                if (listado[indice].getCodigo() == codigoBuscar)
+                if (listado[indice].getNombre() == nombreBuscar)
+                {
                     encontrado = true;
+                    estudianteEncontrado = listado[indice];
+                }
                 indice++;
             }
             if (encontrado == true)
             {
                 Console.WriteLine("Estudiante encontrado!!");
+                estudianteEncontrado.imprimir();
             }else
             {
                 Console.WriteLine("Estudiante NO encontrado!!");

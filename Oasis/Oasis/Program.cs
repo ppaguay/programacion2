@@ -26,6 +26,12 @@ namespace Oasis
             Console.WriteLine(listado.Count);
             listado.Add(est2);
             Console.WriteLine(listado.Count);
+            listado.RemoveAt(0); //Eliminando un elemento
+            //Imprimir todos los elementos
+            for(int i =0; i < listado.Count; i++)
+            {
+                listado[i].getNombre();
+            }
 
             Console.ReadLine();
 
